@@ -2,11 +2,10 @@ package vue;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JTextArea;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.*;
+import javax.swing.*;
 
 import controller.Coordinateur;
 
@@ -44,6 +43,15 @@ public class FenetrePrincipale extends JFrame implements ActionListener{
 		boutonInventaireClient = new JButton();
 		boutonInventaireClient.setBounds(520, 280, 200, 55);
 		boutonInventaireClient.setText("Inventaire Clients");
+		
+		JFrame F = new JFrame();
+		try {
+			F.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("C:/Users/titi/Pictures/scrum.JPG")))));
+		}catch (IOException e)
+		{
+			System.out.println("image doesn't exist");
+			
+		}
 		
 		
 		
