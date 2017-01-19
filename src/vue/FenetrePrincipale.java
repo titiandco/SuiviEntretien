@@ -1,13 +1,11 @@
 //  http://imss-www.upmf-grenoble.fr/prevert/Prog/Java/swing/JFrame.html
-
+// https://www.youtube.com/watch?v=FdQX8sUNO-s
 package vue;
 
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
-import javax.imageio.*;
 import javax.swing.*;
 
 import controller.Coordinateur;
@@ -18,6 +16,10 @@ public class FenetrePrincipale extends JFrame implements ActionListener{
 	 * Fenetre pricipale
 	 * 
 	 */
+	
+	private ImageIcon image1;
+	private JLabel label1;
+	
 	private static final long serialVersionUID = 1L;
 	private Coordinateur monCoordinateur; // objet coordinateur qui permet la relation entre cette classe Fenetre Principale et le coordinateur 
 	private JTextArea areaIntroduction;
@@ -33,6 +35,12 @@ public class FenetrePrincipale extends JFrame implements ActionListener{
      /** Constructeur de la classe : initialise tous les composant de la fenetre principale */
 	 
 	public FenetrePrincipale() {
+		setLayout(new FlowLayout());
+		
+		//image1 = new ImageIcon(getClass().getResource("cerveza.jpg"));
+		label1 = new JLabel(image1);
+		add(label1);
+		
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		boutonEnregistrer = new JButton();
@@ -49,7 +57,7 @@ public class FenetrePrincipale extends JFrame implements ActionListener{
 		//Instanciation d'un objet JPanel
 		JPanel pan = new JPanel();
 		//Définition de sa couleur de fond
-
+		 
 	    pan.setBackground(Color.ORANGE);      
 	    //On prévient notre JFrame que notre JPanel sera son content pane
 	    this.setContentPane(pan);               

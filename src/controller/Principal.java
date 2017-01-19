@@ -26,6 +26,7 @@ public class Principal {
 	  //  Permet d'instancier toutes les classes avec le systeme 
 	  
 	private void depart() {
+		
 		// On instancie les classes
 		maFenetrePrincipale=new FenetrePrincipale();
 		maFenetreEnregistrer=new FenetreEnregistrement();
