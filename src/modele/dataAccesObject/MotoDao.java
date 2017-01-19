@@ -13,13 +13,13 @@ import modele.valueObject.MotoVo;
 /**
  * Classe qui permet l acces a la base de donnees  table moto
  * Dans ce modele Data Access nous avons les  classes qui gèrent à niveau interne le CRUD .
- * Ici juste  la méthode enregistrer une nouvelle moto , champ annee 
+ * Ici juste  la méthode enregistrer une nouvelle moto , champ annee , modele, marque 
  *
  */
 
 public class MotoDao {
 
-	public void enregisterMoto(MotoVo maMoto )
+	public void enregisterMoto(MotoVo maMoto, MotoVo modele, MotoVo marque )
 	{
 		Connexion conex= new Connexion();
 		// requete mysql pour enregistrer une nouvelle moto
@@ -28,7 +28,7 @@ public class MotoDao {
 		// ajout des champ moto
 			Statement etatEnregistrerMoto = conex.getConnection().createStatement();
 			etatEnregistrerMoto.executeUpdate("INSERT INTO moto (mto_Annee) VALUES ('"
-					+maMoto. getAnneeMoto()+ "')");
+					+maMoto. getAnneeMoto()+ modele.getModeleMoto()+ marque.getMarqueMoto()+ "')");
 						
 			JOptionPane.showMessageDialog(null, "Enregistrement OK ","Information",JOptionPane.INFORMATION_MESSAGE);
 			etatEnregistrerMoto.close();

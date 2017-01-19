@@ -1,3 +1,5 @@
+//  http://imss-www.upmf-grenoble.fr/prevert/Prog/Java/swing/JFrame.html
+
 package vue;
 
 import java.awt.event.ActionEvent;
