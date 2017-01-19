@@ -20,7 +20,7 @@ public class Principal {
 		Principal appliPrincipal=new Principal();
 		appliPrincipal.depart();
 	}
-
+//
 	 
 	  //  Permet d'instancier toutes les classes avec le systeme 
 	  
