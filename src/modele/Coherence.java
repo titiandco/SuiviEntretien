@@ -15,7 +15,7 @@ public class Coherence {
 	public static boolean modificationCLient=false;
 	
 	public void setCoordinateur(Coordinateur monCoordinateur) {
-		this.monCoordinateur=monCoordinateur;
+		this.setMonCoordinateur(monCoordinateur);
 		
 		
 	}
@@ -39,7 +39,7 @@ public class Coherence {
 		MotoDao maMotoDaoEnregistrementMoto;
 		
 		maMotoDaoEnregistrementMoto = new MotoDao();
-		maMotoDaoEnregistrementMoto.enregisterMoto(maMoto);
+		maMotoDaoEnregistrementMoto.enregisterMoto(maMoto, maMoto, maMoto);
 	}
 	
     /** methode test lors d'une recherche client par la saisie idClient ,
@@ -87,6 +87,14 @@ public class Coherence {
 	public void validerElimination(String codeId) {
 		PersonneDao monCLientElimination=new PersonneDao();
 		monCLientElimination.eliminarPersona(codeId);
+	}
+
+	public Coordinateur getMonCoordinateur() {
+		return monCoordinateur;
+	}
+
+	public void setMonCoordinateur(Coordinateur monCoordinateur) {
+		this.monCoordinateur = monCoordinateur;
 	}
 
 

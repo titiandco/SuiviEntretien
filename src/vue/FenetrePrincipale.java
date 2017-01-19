@@ -2,6 +2,7 @@
 
 package vue;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -10,7 +11,7 @@ import javax.imageio.*;
 import javax.swing.*;
 
 import controller.Coordinateur;
-
+ 
 public class FenetrePrincipale extends JFrame implements ActionListener{
 	
 	/**
@@ -45,18 +46,15 @@ public class FenetrePrincipale extends JFrame implements ActionListener{
 		boutonInventaireClient = new JButton();
 		boutonInventaireClient.setBounds(520, 280, 200, 55);
 		boutonInventaireClient.setText("Inventaire Clients");
-		
-		JFrame F = new JFrame();
-		try {
-			F.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("C:/Users/titi/Pictures/scrum.JPG")))));
-		}catch (IOException e)
-		{
-			System.out.println("image doesn't exist");
-			
-		}
-		
-		
-		
+		//Instanciation d'un objet JPanel
+		JPanel pan = new JPanel();
+		//Définition de sa couleur de fond
+
+	    pan.setBackground(Color.ORANGE);      
+	    //On prévient notre JFrame que notre JPanel sera son content pane
+	    this.setContentPane(pan);               
+	    this.setVisible(true);
+				
 		labelTitre = new JLabel();
 		labelTitre.setText("Logiciel Moto Entretien et maintenance");
 		labelTitre.setBounds(60, 40, 380, 30);
