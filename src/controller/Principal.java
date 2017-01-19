@@ -19,6 +19,7 @@ public class Principal {
 	public static void main(String[] args) {
 		Principal appliPrincipal=new Principal();
 		appliPrincipal.depart();
+		
 	}
 //
 	 
