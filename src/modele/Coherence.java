@@ -97,6 +97,11 @@ public class Coherence {
 		this.monCoordinateur = monCoordinateur;
 	}
 
+	public void validerListeClient() {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 
 }

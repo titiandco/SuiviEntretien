@@ -4,6 +4,7 @@ import vue.FenetreRechercher;
 import vue.FenetrePrincipale;
 import modele.Coherence;
 import vue.FenetreEnregistrement;
+import vue.FenetreListeClient;
 
 public class Principal {
 	
@@ -11,6 +12,7 @@ public class Principal {
 	FenetrePrincipale maFenetrePrincipale;
 	FenetreRechercher maFenetreRechercher;
 	FenetreEnregistrement maFenetreEnregistrer;
+	FenetreListeClient maFenetreLister;
 	Coordinateur monCoordinateur;
 
 	/**
@@ -31,6 +33,7 @@ public class Principal {
 		maFenetrePrincipale=new FenetrePrincipale();
 		maFenetreEnregistrer=new FenetreEnregistrement();
 		maFenetreRechercher= new FenetreRechercher();
+	    maFenetreLister = new FenetreListeClient();
 		maLogique=new Coherence();
 		monCoordinateur= new Coordinateur();
 		
@@ -38,12 +41,14 @@ public class Principal {
 		maFenetrePrincipale.setCoordinateur(monCoordinateur);
 		maFenetreEnregistrer.setCoordinateur(monCoordinateur);
 		maFenetreRechercher.setCoordinateur(monCoordinateur);
+		maFenetreLister.setCoordinateur(monCoordinateur);
 		maLogique.setCoordinateur(monCoordinateur); 
 		
 		//On etablit les relations entre le coordinateur et les classes
 		monCoordinateur.setMaFenetrePrincipale(maFenetrePrincipale);
 		monCoordinateur.setMaFenetreEnregistrer(maFenetreEnregistrer);
 		monCoordinateur.setMaFenetreRechercher(maFenetreRechercher);
+		monCoordinateur.setMaFenetreListeClient(maFenetreLister);
 		monCoordinateur.setMaLogique(maLogique);
 				
 		maFenetrePrincipale.setVisible(true);

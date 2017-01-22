@@ -7,6 +7,7 @@ import modele.valueObject.PersonneVo;
 import vue.FenetreRechercher;
 import vue.FenetrePrincipale;
 import vue.FenetreEnregistrement;
+import vue.FenetreListeClient;
 /** classe en charge de mettre en relation et coordonner les classes du MVC */
 
 
@@ -16,6 +17,8 @@ public class Coordinateur {
 	private FenetrePrincipale maFenetrePricipale;
 	private FenetreEnregistrement maFenetreSaisieClient;
 	private FenetreRechercher maFenetreRechercheClient;
+	private FenetreListeClient maFenetreListeClient;
+	
 	
 	public FenetrePrincipale getMaFenetrePrincipale() {
 		return maFenetrePricipale;
@@ -41,6 +44,13 @@ public class Coordinateur {
 	public void setMaLogique(Coherence maLogique) {
 		this.logique = maLogique;
 	}
+	public FenetreListeClient getMaFenetreListeClient() {
+		return maFenetreListeClient;
+	}
+	public void setMaFenetreListeClient(FenetreListeClient maFenetreListeClient) {
+		this.maFenetreListeClient = maFenetreListeClient;
+	}	
+	
 	
  
 	/**methode suite aux actions sur les boutons rechercher, enregistrer, eliminer . . . ////
@@ -60,7 +70,6 @@ public class Coordinateur {
 		logique.validerNouvelleMoto(maMoto);
 	}
 	
-	
 	public PersonneVo rechercherClient(String idClient) {
 		return logique.validerRechercheClient(idClient);
 	}
@@ -71,6 +80,14 @@ public class Coordinateur {
 	public void eliminerClient(String idCLient) {
 		logique.validerElimination(idCLient);
 	}
-	/** public void afficherInventaireClient() */
+   
+	public void afficherListeClient() {  
+		logique.validerListeClient();
+	}
+	public void montrerFenetreListe() {
+		// TODO Auto-generated method stub
+		
+	}
+	
 
 }

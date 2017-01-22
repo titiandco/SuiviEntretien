@@ -121,9 +121,9 @@ public class FenetrePrincipale extends JFrame implements ActionListener{
 		if (e.getSource()==boutonRechercher) {
 			monCoordinateur.montrerFenetreRecherche();			
 		}
-        //if (e.getSource()==boutonInventaireClient){
-        	//monCoordinateur.
-        //}
+        if (e.getSource()==boutonInventaireClient){
+        	monCoordinateur.montrerFenetreListe();
+        }
 	
 	
 	}
