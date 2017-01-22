@@ -57,6 +57,11 @@ public class FenetrePrincipale extends JFrame implements ActionListener{
 		//Instanciation d'un objet JPanel
 		JPanel pan = new JPanel();
 		//Définition de sa couleur de fond
+		
+		
+		
+		
+		
 		 
 	    pan.setBackground(Color.ORANGE);      
 	    //On prévient notre JFrame que notre JPanel sera son content pane
@@ -69,7 +74,7 @@ public class FenetrePrincipale extends JFrame implements ActionListener{
 		labelTitre.setFont(new java.awt.Font("Verdana", 1, 15));
 
 		labelChoix = new JLabel();
-		labelChoix.setText("Faite votre choix :"); // affectation d un texte a labelSeleccion 
+		labelChoix.setText("Faite votre choix :"); // affectation d un texte a labelSelection 
  		labelChoix.setBounds(370, 240, 250, 25);
 
 		texteIntroduction = "Logiciel permettant de gérer la maintenance , le suivi et l'entetien d'une moto "

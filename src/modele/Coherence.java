@@ -102,6 +102,11 @@ public class Coherence {
 		
 	}
 
+	public void validerListeClient(PersonneVo monCLient) {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 
 }

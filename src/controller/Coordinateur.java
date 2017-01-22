@@ -26,30 +26,39 @@ public class Coordinateur {
 	public void setMaFenetrePrincipale(FenetrePrincipale maFenetrePrincipale) {
 		this.maFenetrePricipale = maFenetrePrincipale;
 	}
+	
+	
 	public FenetreEnregistrement getMaFenetreEnregistrer() {
 		return maFenetreSaisieClient;
 	}
 	public void setMaFenetreEnregistrer(FenetreEnregistrement maFenetreEnregistrer) {
 		this.maFenetreSaisieClient = maFenetreEnregistrer;
 	}
+	
+	
 	public FenetreRechercher getMaFenetreRechercher() {
 		return maFenetreRechercheClient;
 	}
+		
 	public void setMaFenetreRechercher(FenetreRechercher maFenetreRechercher) {
 		this.maFenetreRechercheClient = maFenetreRechercher;
 	}
-	public Coherence getMaLogique() {
-		return logique;
-	}
-	public void setMaLogique(Coherence maLogique) {
-		this.logique = maLogique;
-	}
+	
 	public FenetreListeClient getMaFenetreListeClient() {
 		return maFenetreListeClient;
 	}
 	public void setMaFenetreListeClient(FenetreListeClient maFenetreListeClient) {
 		this.maFenetreListeClient = maFenetreListeClient;
 	}	
+	
+	
+	public Coherence getMaLogique() {
+		return logique;
+	}
+	public void setMaLogique(Coherence maLogique) {
+		this.logique = maLogique;
+	}
+	
 	
 	
  
@@ -61,7 +70,10 @@ public class Coordinateur {
 	public void montrerFenetreRecherche() {
 		maFenetreRechercheClient.setVisible(true);
 	}
-	
+	public void montrerFenetreListe() {
+		maFenetreListeClient.setVisible(true);
+		
+	}
 	public void enregistrerNouveauClient(PersonneVo monClient) {
 		logique.validerEnregistrementClient(monClient);
 	}
@@ -69,7 +81,6 @@ public class Coordinateur {
 	public void enregistrerNouvelleMoto(MotoVo maMoto) {
 		logique.validerNouvelleMoto(maMoto);
 	}
-	
 	public PersonneVo rechercherClient(String idClient) {
 		return logique.validerRechercheClient(idClient);
 	}
@@ -80,14 +91,10 @@ public class Coordinateur {
 	public void eliminerClient(String idCLient) {
 		logique.validerElimination(idCLient);
 	}
-   
-	public void afficherListeClient() {  
-		logique.validerListeClient();
-	}
-	public void montrerFenetreListe() {
-		// TODO Auto-generated method stub
-		
+   	public void afficherListeClient(PersonneVo monCLient) {  
+		logique.validerListeClient(monCLient);
 	}
 	
+ 
 
 }
